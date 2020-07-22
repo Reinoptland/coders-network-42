@@ -56,10 +56,10 @@
       - import useDispatch
       - dispatch the action
       - test if it is dispatched -> redux devtools
-    - [] Handle the action in the reducer
+    - [x] Handle the action in the reducer
       - Add case
       - write some reducer logic
-      - test it
+      - test it -> redux devtools (click action, look at diff)
     - [] Verify that the whole system works
       - remove the fake initial state
 
