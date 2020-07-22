@@ -15,7 +15,18 @@
 
   - Setup router
 
-    - Install deps
-    - Wrap our app in a Router
+    - X Install deps
+    - X Wrap our app in a Router
 
 - Making the feed page
+
+  - Local state
+
+    - useState -> for posts
+    - fetch data (axios, useEffect)
+    - Display the posts (render)
+
+  - Using Redux
+    - What are the steps?
+  - Using a thunk
+    - ..?
