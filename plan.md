@@ -41,17 +41,17 @@
       - test it -> log in selector, then in component
     - [x] Display initialState from the store
       - JSX, map
-      - test it
+      - test it -> use your eyes
     - [x] Fetch data
       - async function
       - useEffect
-      - test it
-    - [] Create an action (using an action creator)
+      - test it -> console.log response
+    - [x] Create an action (using an action creator)
       - make file for it
       - write a function that creates an action
       - import
       - we call the function
-      - test it (object with type & payload)
+      - test it (log -> object with type & payload)
     - [] Dispatch the action
       - import useDispatch
       - dispatch the action
