@@ -1,5 +1,5 @@
 const initialState = {
-  loading: true,
+  loading: false,
   posts: [],
 };
 
@@ -10,6 +10,9 @@ export default function postsReducer(state = initialState, action = {}) {
   // -> copy parts of the state you want to keep (some spread ...)
   // -> return a new state
   switch (action.type) {
+    case "LOADING_POSTS":
+      return { ...state, loading: true };
+
     case "FETCHED_5_POSTS":
       return {
         ...state,

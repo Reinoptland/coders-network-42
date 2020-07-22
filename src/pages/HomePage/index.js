@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { selectPosts } from "../../store/posts/selectors";
-import { fetched5Posts } from "../../store/posts/actions";
+import { selectPosts, isLoading } from "../../store/posts/selectors";
+import { fetched5Posts, loadingPosts } from "../../store/posts/actions";
 import { useSelector, useDispatch } from "react-redux";
 import "./HomePage.css";
 import axios from "axios";
 
 export default function HomePage() {
   const posts = useSelector(selectPosts);
+  const loading = useSelector(isLoading);
+  console.log("LOADING?", loading);
   const dispatch = useDispatch();
   //   console.log("What are posts in component?", posts);
 
   useEffect(() => {
     async function getPosts() {
+      const loadingAction = loadingPosts();
+      console.log(loadingAction);
+      dispatch(loadingAction);
       const response = await axios.get(
         "https://codaisseur-coders-network.herokuapp.com/posts?offset=0&limit=5"
       );
@@ -23,6 +28,11 @@ export default function HomePage() {
 
     getPosts();
   }, [dispatch]);
+
+  if (loading) {
+    return <h1>Loading</h1>;
+  }
+
   return (
     <div>
       <h1>Hello I am homepage</h1>

@@ -26,7 +26,7 @@
     - fetch data (axios, useEffect)
     - Display the posts (render)
 
-  - Using Redux (what will change) -> Go with the Flow
+  - Using Redux (what will change) -> Check yourself & Go with the Flow
 
     - [x] Setup
     - [x] Create reducer for the state we are going to use (if it doesn't exist yet)
@@ -60,7 +60,7 @@
       - Add case
       - write some reducer logic
       - test it -> redux devtools (click action, look at diff)
-    - [] Verify that the whole system works
+    - [x] Verify that the whole system works
       - remove the fake initial state
 
 * Using a thunk
