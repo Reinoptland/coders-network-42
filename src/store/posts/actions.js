@@ -45,3 +45,19 @@ export async function fetch5Posts(dispatch, getState) {
   console.log("ACTION?", action);
   dispatch(action);
 }
+
+// for a detail page (read more)
+export function fetchPostById(postId) {
+  return async function (dispatch, getState) {
+    const response = await axios.get(
+      `https://codaisseur-coders-network.herokuapp.com/posts/${postId}`
+    );
+
+    console.log(response);
+    dispatch({ type: "FETCHED_SPECIFIC " });
+  };
+}
+
+// const fetchPostById = (postId) => (dispatch, getState) => {
+
+// }

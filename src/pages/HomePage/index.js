@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { selectPosts, isLoading } from "../../store/posts/selectors";
-import { fetch5Posts } from "../../store/posts/actions";
+import { fetch5Posts, fetchPostById } from "../../store/posts/actions";
 import { useSelector, useDispatch } from "react-redux";
 import "./HomePage.css";
 
@@ -12,7 +12,10 @@ export default function HomePage() {
   //   console.log("What are posts in component?", posts);
 
   useEffect(() => {
+    // thunk without argument
     dispatch(fetch5Posts);
+    // thunk with an argument
+    dispatch(fetchPostById(1));
   }, [dispatch]);
 
   function fetchMore() {
