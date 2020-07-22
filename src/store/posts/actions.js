@@ -4,7 +4,7 @@ import axios from "axios";
 const FETCHED_5_POSTS = "FETCHED_5_POSTS";
 const LOADING_POSTS = "LOADING_POSTS";
 
-// Action creators
+// Action creators (synchronous, type & payload kind)
 export function fetched5Posts(posts) {
   return {
     type: FETCHED_5_POSTS,
@@ -17,6 +17,8 @@ export function loadingPosts() {
     type: LOADING_POSTS,
   };
 }
+
+// Thunk actions
 
 // this a thunk, it has dispatch and getState as parameters
 export async function fetch5Posts(dispatch, getState) {
