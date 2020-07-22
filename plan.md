@@ -34,11 +34,11 @@
     - [x] Create a component for the data we want to display
       - Component / Route
       - Route
-    - [] Write a selector
+    - [x] Write a selector
       - Make a file for it
       - export it
       - write the selector logic
-      - test it
+      - test it -> log in selector, then in component
     - [] Display initialState from the store
       - JSX, map
       - test it
