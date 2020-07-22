@@ -7,6 +7,17 @@ import axios from "axios";
 export default function HomePage() {
   const posts = useSelector(selectPosts);
   //   console.log("What are posts in component?", posts);
+
+  useEffect(() => {
+    async function getPosts() {
+      const response = await axios.get(
+        "https://codaisseur-coders-network.herokuapp.com/posts?offset=0&limit=5"
+      );
+      console.log("RES:", response.data.rows);
+    }
+
+    getPosts();
+  }, []);
   return (
     <div>
       <h1>Hello I am homepage</h1>

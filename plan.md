@@ -39,10 +39,10 @@
       - export it
       - write the selector logic
       - test it -> log in selector, then in component
-    - [] Display initialState from the store
+    - [x] Display initialState from the store
       - JSX, map
       - test it
-    - [] Fetch data
+    - [x] Fetch data
       - async function
       - useEffect
       - test it
