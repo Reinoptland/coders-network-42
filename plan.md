@@ -64,4 +64,7 @@
       - remove the fake initial state
 
 * Using a thunk
-  - ..?
+  - Move our request logic & dispatching of action to another function (thunk)
+  - We dispatch our thunk action, which:
+    - Make the requests
+    - Dispatches multiple actions

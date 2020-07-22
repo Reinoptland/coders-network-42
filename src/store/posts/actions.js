@@ -1,3 +1,5 @@
+import axios from "axios";
+
 // Action types
 const FETCHED_5_POSTS = "FETCHED_5_POSTS";
 const LOADING_POSTS = "LOADING_POSTS";
@@ -14,4 +16,22 @@ export function loadingPosts() {
   return {
     type: LOADING_POSTS,
   };
+}
+
+// this a thunk, it has dispatch and getState as parameters
+export async function fetch5Posts(dispatch, getState) {
+  //   console.log("STATE IN THUNK ACTION", getState());
+  //   dispatch({ type: "HELLO_STUDENTS_FROM_THUNK" });
+  //   dispatch({ type: "HELLO_STUDENTS_FROM_THUNK_AGAIN" });
+  //   dispatch({ type: "HELLO_STUDENTS_FROM_THUNK_ONE_MORE_TIME" });
+  const loadingAction = loadingPosts();
+  console.log(loadingAction);
+  dispatch(loadingAction);
+  const response = await axios.get(
+    "https://codaisseur-coders-network.herokuapp.com/posts?offset=0&limit=5"
+  );
+  console.log("RES:", response.data.rows);
+  const action = fetched5Posts(response.data.rows);
+  console.log("ACTION?", action);
+  dispatch(action);
 }
