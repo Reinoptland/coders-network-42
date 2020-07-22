@@ -10,6 +10,14 @@ export default function HomePage() {
   return (
     <div>
       <h1>Hello I am homepage</h1>
+      {posts.map((post) => {
+        return (
+          <div key={post.id}>
+            <h1>{post.title}</h1>
+            <p>{post.content}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
