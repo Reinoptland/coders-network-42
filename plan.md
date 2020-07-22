@@ -6,11 +6,12 @@
 
   - Setup Redux
 
-    - Install deps
-    - Create a store
-    - A root Reducer (all the reducers together)
-    - A posts reducer
-    - Change index.js -> Provider
+    - X Install deps
+    - X Create a store
+    - X A root Reducer (all the reducers together)
+    - X A posts reducer
+    - X Change index.js -> Provider
+    - TEST: log something in the reducer, check redux devtools
 
   - Setup router
 
