@@ -24,11 +24,19 @@ export async function fetch5Posts(dispatch, getState) {
   //   dispatch({ type: "HELLO_STUDENTS_FROM_THUNK" });
   //   dispatch({ type: "HELLO_STUDENTS_FROM_THUNK_AGAIN" });
   //   dispatch({ type: "HELLO_STUDENTS_FROM_THUNK_ONE_MORE_TIME" });
+
+  // Create a loading action, before we start fetching
   const loadingAction = loadingPosts();
   console.log(loadingAction);
+  // dispatch it
   dispatch(loadingAction);
+
+  // find out how many posts we have using getState
+  const state = getState();
+  const postCount = state.feed.posts.length;
+  // set postCount as an offset (which posts do we want next?)
   const response = await axios.get(
-    "https://codaisseur-coders-network.herokuapp.com/posts?offset=0&limit=5"
+    `https://codaisseur-coders-network.herokuapp.com/posts?offset=${postCount}&limit=5`
   );
   console.log("RES:", response.data.rows);
   const action = fetched5Posts(response.data.rows);

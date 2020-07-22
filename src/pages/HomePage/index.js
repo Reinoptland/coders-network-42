@@ -15,6 +15,10 @@ export default function HomePage() {
     dispatch(fetch5Posts);
   }, [dispatch]);
 
+  function fetchMore() {
+    dispatch(fetch5Posts);
+  }
+
   if (loading) {
     return <h1>Loading</h1>;
   }
@@ -30,6 +34,7 @@ export default function HomePage() {
           </div>
         );
       })}
+      <button onClick={fetchMore}>Fetch 5 more posts</button>
     </div>
   );
 }
