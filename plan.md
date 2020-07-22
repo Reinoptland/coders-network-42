@@ -52,10 +52,10 @@
       - import
       - we call the function
       - test it (log -> object with type & payload)
-    - [] Dispatch the action
+    - [x] Dispatch the action
       - import useDispatch
       - dispatch the action
-      - test if it is dispatched
+      - test if it is dispatched -> redux devtools
     - [] Handle the action in the reducer
       - Add case
       - write some reducer logic

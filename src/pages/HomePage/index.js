@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { selectPosts } from "../../store/posts/selectors";
 import { fetched5Posts } from "../../store/posts/actions";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import "./HomePage.css";
 import axios from "axios";
 
 export default function HomePage() {
   const posts = useSelector(selectPosts);
+  const dispatch = useDispatch();
   //   console.log("What are posts in component?", posts);
 
   useEffect(() => {
@@ -16,11 +17,12 @@ export default function HomePage() {
       );
       //   console.log("RES:", response.data.rows);
       const action = fetched5Posts(response.data.rows);
-      console.log("ACTION?", action);
+      //   console.log("ACTION?", action);
+      dispatch(action);
     }
 
     getPosts();
-  }, []);
+  }, [dispatch]);
   return (
     <div>
       <h1>Hello I am homepage</h1>
