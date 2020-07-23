@@ -20,6 +20,13 @@ export function loadingPosts() {
 
 // Thunk actions
 
+export function createPost(title, content) {
+  // AND A TOKEN!!
+  return function (dispatch, getState) {
+    console.log("DATA IN THUNK:", title, content);
+  };
+}
+
 // this a thunk, it has dispatch and getState as parameters
 export async function fetch5Posts(dispatch, getState) {
   //   console.log("STATE IN THUNK ACTION", getState());

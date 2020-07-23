@@ -16,8 +16,8 @@
 
 - Send a request
 
-  - Thunk (async action -> we will make a post request)
-  - Dispatch it (just to test)
+  - X Thunk (async action -> we will make a post request)
+  - X Dispatch it (just to test)
   - Make a post request with our token in the Auth header
 
 - Backend stuff (make a route, database logic etc .. already done)
