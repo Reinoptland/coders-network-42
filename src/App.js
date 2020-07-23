@@ -10,6 +10,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Link to="/">Read stuff</Link>
         <Link to="/signup">Signup</Link>
         <Link to="/login">Login</Link>
         <Link to="/newpost">Post something!</Link>
