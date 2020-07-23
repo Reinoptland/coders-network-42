@@ -37,12 +37,12 @@ Done!
 
   - X Action (thunk) -> responsible making a request
   - X Dispatch our thunk (to test)
-  - Make a post request
+  - X Make a post request
 
 - Backend (login endpoint, database logic etc... (done))
 
 - Handling the response
-  - Response (ok) -> JWT
+  - X Response (ok) -> JWT
   - Create an action (synchronous)
   - Dispatch the action
   - Reducer

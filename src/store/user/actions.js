@@ -42,7 +42,13 @@ export function signUp(name, email, password) {
 }
 
 export function login(email, password) {
-  return function (dispatch, getState) {
+  return async function (dispatch, getState) {
     console.log("LOGIN THUNK:", email, password);
+    const response = await axios.post(`${API_URL}/login`, {
+      email: email,
+      password: password,
+    });
+
+    console.log("LOGIN RESPONSE:", response);
   };
 }
