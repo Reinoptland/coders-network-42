@@ -35,8 +35,8 @@ Done!
   - X Event handlers & Listeners
 - Make request
 
-  - Action (thunk) -> responsible making a request
-  - Dispatch our thunk (to test)
+  - X Action (thunk) -> responsible making a request
+  - X Dispatch our thunk (to test)
   - Make a post request
 
 - Backend (login endpoint, database logic etc... (done))

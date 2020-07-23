@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import { } from "../../store/user/actions";
+import { login } from "../../store/user/actions";
 import { useDispatch } from "react-redux";
 
 export default function LoginPage() {
@@ -10,6 +10,7 @@ export default function LoginPage() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(password, email);
+    dispatch(login(email, password));
   }
   return (
     <div>

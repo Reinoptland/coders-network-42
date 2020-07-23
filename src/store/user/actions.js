@@ -20,7 +20,7 @@ function signupSuccess(token) {
 // THUNK TO SEND A REQUEST TO SIGNUP TO THE BACKEND
 export function signUp(name, email, password) {
   return async function (dispatch, getState) {
-    console.log("INSIDE THUNK", email, password);
+    // console.log("INSIDE THUNK", email, password);
 
     try {
       const response = await axios.post(`${API_URL}/signup`, {
@@ -33,10 +33,16 @@ export function signUp(name, email, password) {
 
       const token = response.data.jwt;
       const action = signupSuccess(token);
-      console.log(action);
+      //   console.log(action);
       dispatch(action);
     } catch (error) {
       console.log(error);
     }
+  };
+}
+
+export function login(email, password) {
+  return function (dispatch, getState) {
+    console.log("LOGIN THUNK:", email, password);
   };
 }
