@@ -28,11 +28,11 @@ Done!
 
 ## What do we need
 
-- UI
-  - Login page
-  - Route
-  - Form
-  - Event handlers & Listeners
+- X UI
+  - X Login page
+  - X Route
+  - X Form
+  - X Event handlers & Listeners
 - Make request
 
   - Action (thunk) -> responsible making a request
