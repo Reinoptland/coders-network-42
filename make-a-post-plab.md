@@ -6,8 +6,11 @@
 
 - UI
 
-  - Page to make a blogpost
-  - Route & Link
+  - X Page to make a blogpost
+  - X Route & Link
+  - Encourage user to signup / login (make a link)
+    - Make selector for the token
+    - If token is null, show something like: please signup, k thx
   - Form
   - Event Handlers & Listeners
 
