@@ -27,13 +27,13 @@
   - X Response (ok) -> Our post that was created
   - X Create an Action (synchronous, with type & payload)
   - X Dispatch this action
-  - Handle the action in the reducer
-    - Make a reducer if it doesn't exists
-    - Update the state
+  - X Handle the action in the reducer
+    - X Make a reducer if it doesn't exists
+    - X Update the state
 
-- Display the data
+- X Display the data
 
-  - Page to display the post
-  - Selector (display our new post)
-  - Use the selector
+  - Add our new post to the feed
   - Display our new post
+
+- BONUS: Redirects for user friendliness
