@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { selectToken } from "../../store/user/selectors";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { createPost } from "../../store/posts/actions";
 
 export default function CreateBlogPost() {
   const dispatch = useDispatch();
+  const history = useHistory();
   const token = useSelector(selectToken);
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
@@ -28,6 +29,8 @@ export default function CreateBlogPost() {
     event.preventDefault();
     console.log(title, content);
     dispatch(createPost(title, content));
+    // redirect to the homepage using useHistory & history.push
+    history.push("/");
   }
 
   return (
