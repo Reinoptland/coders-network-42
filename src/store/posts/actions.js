@@ -4,6 +4,7 @@ const API_URL = "https://codaisseur-coders-network.herokuapp.com";
 // Action types
 const FETCHED_5_POSTS = "FETCHED_5_POSTS";
 const LOADING_POSTS = "LOADING_POSTS";
+const POST_CREATED = "POST_CREATED";
 
 // Action creators (synchronous, type & payload kind)
 export function fetched5Posts(posts) {
@@ -16,6 +17,13 @@ export function fetched5Posts(posts) {
 export function loadingPosts() {
   return {
     type: LOADING_POSTS,
+  };
+}
+
+export function postCreated(post) {
+  return {
+    type: POST_CREATED,
+    payload: post,
   };
 }
 
@@ -42,6 +50,8 @@ export function createPost(title, content) {
     );
 
     console.log("RESPONSE:", response);
+    const action = postCreated(response.data);
+    dispatch(action);
   };
 }
 

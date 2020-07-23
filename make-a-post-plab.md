@@ -25,8 +25,8 @@
 - Handle our response
 
   - X Response (ok) -> Our post that was created
-  - Create an Action (synchronous, with type & payload)
-  - Dispatch this action
+  - X Create an Action (synchronous, with type & payload)
+  - X Dispatch this action
   - Handle the action in the reducer
     - Make a reducer if it doesn't exists
     - Update the state
