@@ -4,7 +4,7 @@
 
 - X Route to SignUp page
 - X SignUp Form
-- Event handlers -> onChange & onSubmit
+- X Event handlers -> onChange & onSubmit
 - Dispatch an action (thunk, async action)
 - Thunk ->
 
