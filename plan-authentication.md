@@ -5,16 +5,16 @@
 - X Route to SignUp page
 - X SignUp Form
 - X Event handlers -> onChange & onSubmit
-- Dispatch an action (thunk, async action)
-- Thunk ->
+- X Dispatch an action (thunk, async action)
+- X Thunk ->
 
-  - Post request to the backend
-  - Email & Password
+  - X Post request to the backend
+  - X Email & Password
 
 - Backend (already done)
 
 - Thunk (continued)
-  - Response (ok) we get a JWT -> we need to stor it
+  - X Response (ok) we get a JWT -> we need to stor it
   - dispatch action (synchronous action, type & payload)
 - Reducer
   - Write a case
