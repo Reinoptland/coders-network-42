@@ -12,7 +12,7 @@
     - X Make selector for the token
     - X If token is null, show something like: please signup, k thx
   - X Form
-  - Event Handlers & Listeners
+  - X Event Handlers & Listeners
 
 - Send a request
 
