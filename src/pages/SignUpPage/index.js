@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { signUp } from "../../store/user/actions";
+import { useDispatch } from "react-redux";
 
 export default function SignUpPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
 
   function handleSubmit(event) {
     event.preventDefault();
-
+    dispatch(signUp(email, password));
     console.log(password, email);
   }
   return (
