@@ -1,4 +1,4 @@
-## As a app owner I want people to be logged in before they start sharing their ideas, so I don't get spammed to death
+## As a app owner I want people to signup before they start sharing their ideas, so I don't get spammed to death
 
 ## What do we need
 
@@ -23,3 +23,30 @@
   - X store the token (update the state, we have a token)
 
 Done!
+
+## As a app owner I want people to be able to login, so they don't have to create a new account each time
+
+## What do we need
+
+- UI
+  - Login page
+  - Route
+  - Form
+  - Event handlers & Listeners
+- Make request
+
+  - Action (thunk) -> responsible making a request
+  - Dispatch our thunk (to test)
+  - Make a post request
+
+- Backend (login endpoint, database logic etc... (done))
+
+- Handling the response
+  - Response (ok) -> JWT
+  - Create an action (synchronous)
+  - Dispatch the action
+  - Reducer
+    - Case statement
+    - Return a new state
+
+DONE!
