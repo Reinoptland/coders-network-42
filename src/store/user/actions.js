@@ -2,6 +2,21 @@ import axios from "axios";
 
 const API_URL = "https://codaisseur-coders-network.herokuapp.com";
 
+// ACTION TYPES
+
+const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+
+// ACTION CREATORS
+
+function signupSuccess(token) {
+  return {
+    type: SIGNUP_SUCCESS,
+    payload: token,
+  };
+}
+
+// THUNK ACTION CREATORS
+
 // THUNK TO SEND A REQUEST TO SIGNUP TO THE BACKEND
 export function signUp(name, email, password) {
   return async function (dispatch, getState) {
@@ -14,7 +29,12 @@ export function signUp(name, email, password) {
         password: password,
       });
 
-      console.log(response);
+      console.log("RES:", response.data.jwt);
+
+      const token = response.data.jwt;
+      const action = signupSuccess(token);
+      console.log(action);
+      dispatch(action);
     } catch (error) {
       console.log(error);
     }

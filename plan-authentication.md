@@ -15,7 +15,7 @@
 
 - Thunk (continued)
   - X Response (ok) we get a JWT -> we need to stor it
-  - dispatch action (synchronous action, type & payload)
+  - X dispatch action (synchronous action, type & payload)
 - Reducer
   - Write a case
   - store the token (update the state, we have a token)
