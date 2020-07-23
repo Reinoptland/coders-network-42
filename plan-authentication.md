@@ -17,7 +17,9 @@
   - X Response (ok) we get a JWT -> we need to stor it
   - X dispatch action (synchronous action, type & payload)
 - Reducer
-  - Write a case
-  - store the token (update the state, we have a token)
+  - X make a new reducer (if it does not exist)
+  - X import it in the rootreducer
+  - X Write a case
+  - X store the token (update the state, we have a token)
 
 Done!
