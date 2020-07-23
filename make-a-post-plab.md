@@ -10,8 +10,8 @@
   - X Route & Link
   - Encourage user to signup / login (make a link)
     - X Make selector for the token
-    - If token is null, show something like: please signup, k thx
-  - Form
+    - X If token is null, show something like: please signup, k thx
+  - X Form
   - Event Handlers & Listeners
 
 - Send a request

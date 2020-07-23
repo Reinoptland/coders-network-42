@@ -20,5 +20,15 @@ export default function CreateBlogPost() {
     );
   }
 
-  return <div>BE CREATIVE HERE ...</div>;
+  return (
+    <div>
+      <form>
+        <label>Some clickbait title here ...</label>
+        <input name="title" type="text" />
+        <label>Smart thoughts go here</label>
+        <textarea name="content" type="text" />
+        <input type="submit" />
+      </form>
+    </div>
+  );
 }
