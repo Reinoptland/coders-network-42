@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import { login } from "../../store/user/actions";
-import { useDispatch } from "react-redux";
+import { selectToken } from "../../store/user/selectors";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+  const history = useHistory();
+  const token = useSelector(selectToken);
 
   function handleSubmit(event) {
     event.preventDefault();
     console.log(password, email);
     dispatch(login(email, password));
   }
+
+  if (token !== null) {
+    history.push("/newpost");
+  }
+
   return (
     <div>
       LOGIN!

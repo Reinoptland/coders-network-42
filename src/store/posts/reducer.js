@@ -20,6 +20,12 @@ export default function postsReducer(state = initialState, action = {}) {
         loading: false,
       };
 
+    case "POST_CREATED":
+      return {
+        ...state,
+        posts: [action.payload, ...state.posts],
+      };
+
     default:
       return state;
   }

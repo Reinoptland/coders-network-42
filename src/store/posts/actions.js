@@ -1,8 +1,10 @@
 import axios from "axios";
+const API_URL = "https://codaisseur-coders-network.herokuapp.com";
 
 // Action types
 const FETCHED_5_POSTS = "FETCHED_5_POSTS";
 const LOADING_POSTS = "LOADING_POSTS";
+const POST_CREATED = "POST_CREATED";
 
 // Action creators (synchronous, type & payload kind)
 export function fetched5Posts(posts) {
@@ -18,7 +20,40 @@ export function loadingPosts() {
   };
 }
 
+export function postCreated(post) {
+  return {
+    type: POST_CREATED,
+    payload: post,
+  };
+}
+
 // Thunk actions
+
+export function createPost(title, content) {
+  return async function (dispatch, getState) {
+    console.log("DATA IN THUNK:", title, content);
+    // AND A TOKEN!! how do we get it?
+    console.log("ENTIRE STATE INSIDE THUNK:", getState());
+    const token = getState().user.jwt;
+    console.log("TOKEN?", token);
+    const response = await axios.post(
+      `${API_URL}/posts`,
+      {
+        title: title,
+        content: content,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    console.log("RESPONSE:", response);
+    const action = postCreated(response.data);
+    dispatch(action);
+  };
+}
 
 // this a thunk, it has dispatch and getState as parameters
 export async function fetch5Posts(dispatch, getState) {
