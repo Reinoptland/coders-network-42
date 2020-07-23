@@ -18,13 +18,13 @@
 
   - X Thunk (async action -> we will make a post request)
   - X Dispatch it (just to test)
-  - Make a post request with our token in the Auth header
+  - X Make a post request with our token in the Auth header
 
 - Backend stuff (make a route, database logic etc .. already done)
 
 - Handle our response
 
-  - Response (ok) -> Our post that was created
+  - X Response (ok) -> Our post that was created
   - Create an Action (synchronous, with type & payload)
   - Dispatch this action
   - Handle the action in the reducer

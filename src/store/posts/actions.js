@@ -1,4 +1,5 @@
 import axios from "axios";
+const API_URL = "https://codaisseur-coders-network.herokuapp.com";
 
 // Action types
 const FETCHED_5_POSTS = "FETCHED_5_POSTS";
@@ -21,12 +22,26 @@ export function loadingPosts() {
 // Thunk actions
 
 export function createPost(title, content) {
-  return function (dispatch, getState) {
+  return async function (dispatch, getState) {
     console.log("DATA IN THUNK:", title, content);
     // AND A TOKEN!! how do we get it?
     console.log("ENTIRE STATE INSIDE THUNK:", getState());
     const token = getState().user.jwt;
     console.log("TOKEN?", token);
+    const response = await axios.post(
+      `${API_URL}/posts`,
+      {
+        title: title,
+        content: content,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
+    console.log("RESPONSE:", response);
   };
 }
 
