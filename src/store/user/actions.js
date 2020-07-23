@@ -5,12 +5,20 @@ const API_URL = "https://codaisseur-coders-network.herokuapp.com";
 // ACTION TYPES
 
 const SIGNUP_SUCCESS = "SIGNUP_SUCCESS";
+const LOGIN_SUCCESS = "LOGIN_SUCCESS";
 
 // ACTION CREATORS
 
 function signupSuccess(token) {
   return {
     type: SIGNUP_SUCCESS,
+    payload: token,
+  };
+}
+
+function loginSuccess(token) {
+  return {
+    type: LOGIN_SUCCESS,
     payload: token,
   };
 }
@@ -50,5 +58,9 @@ export function login(email, password) {
     });
 
     console.log("LOGIN RESPONSE:", response);
+    const action = loginSuccess(response.data.jwt);
+
+    console.log("ACTION:", action);
+    dispatch(action);
   };
 }

@@ -43,8 +43,8 @@ Done!
 
 - Handling the response
   - X Response (ok) -> JWT
-  - Create an action (synchronous)
-  - Dispatch the action
+  - X Create an action (synchronous)
+  - X Dispatch the action
   - Reducer
     - Case statement
     - Return a new state
