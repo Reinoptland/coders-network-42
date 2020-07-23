@@ -21,9 +21,12 @@ export function loadingPosts() {
 // Thunk actions
 
 export function createPost(title, content) {
-  // AND A TOKEN!!
   return function (dispatch, getState) {
     console.log("DATA IN THUNK:", title, content);
+    // AND A TOKEN!! how do we get it?
+    console.log("ENTIRE STATE INSIDE THUNK:", getState());
+    const token = getState().user.jwt;
+    console.log("TOKEN?", token);
   };
 }
 
