@@ -7,6 +7,9 @@ export default function userReducer(state = initialState, action = {}) {
     case "SIGNUP_SUCCESS":
       return { ...state, jwt: action.payload };
 
+    case "LOGIN_SUCCESS":
+      return { ...state, jwt: action.payload };
+
     default:
       return state;
   }

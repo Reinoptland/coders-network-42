@@ -45,8 +45,8 @@ Done!
   - X Response (ok) -> JWT
   - X Create an action (synchronous)
   - X Dispatch the action
-  - Reducer
-    - Case statement
-    - Return a new state
+  - X Reducer
+    - X Case statement
+    - X Return a new state
 
 DONE!
